@@ -9,7 +9,7 @@ import { mockKeyring } from './keyring'
 import { stubApi } from './transactions'
 
 const link = new HttpLink({
-  uri: 'http://localhost:8081/graphql',
+  uri: 'https://query.joystream.org/graphql',
   fetch: (uri, options) => fetch(uri, options),
 })
 

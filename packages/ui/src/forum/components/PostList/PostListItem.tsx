@@ -43,24 +43,14 @@ interface PostListItemProps {
   repliesToLink: string
 }
 
-export const PostListItem = ({
-  isFirstItem,
-  post,
-  isSelected,
-  isPreview,
-  isThreadActive,
-  insertRef,
-  type,
-  link,
-  isDiscussion,
-  repliesToLink,
-}: PostListItemProps) => {
+export const PostListItem = ({isFirstItem, post, isSelected, isPreview, isThreadActive, insertRef, type, link, isDiscussion, repliesToLink}: PostListItemProps) => {
   const { active } = useMyMemberships()
   const { createdAtBlock, lastEditedAt, author, text, repliesTo } = post
   const [postLastEditedAt, setPostLastEditedAt] = useState<string | undefined>(lastEditedAt)
   const location = useLocation()
   const { showModal } = useModal()
   const ref = useRef<HTMLDivElement>(null)
+
   useEffect(() => {
     !!ref.current && insertRef && insertRef(ref)
   }, [ref.current])

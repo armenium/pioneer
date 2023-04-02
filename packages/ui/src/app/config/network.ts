@@ -28,23 +28,23 @@ type PredefinedEndpoint = { [K in NetworkType]?: string }
 
 const QUERY_NODE_ENDPOINT_SUBSCRIPTION: PredefinedEndpoint = {
   mainnet: MAINNET_QUERY_NODE_SOCKET,
-  local: 'ws://localhost:8081/graphql',
+  local: 'ws://query.joystream.org/graphql',
   testnet: TESTNET_QUERY_NODE_SOCKET,
-  'local-mocks': 'ws://localhost:8081/graphql',
+  'local-mocks': 'ws://query.joystream.org/graphql',
 }
 
 const QUERY_NODE_ENDPOINT: PredefinedEndpoint = {
   mainnet: MAINNET_QUERY_NODE,
-  local: 'http://localhost:8081/graphql',
+  local: 'https://query.joystream.org/graphql',
   testnet: TESTNET_QUERY_NODE,
-  'local-mocks': 'http://localhost:8081/graphql',
+  'local-mocks': 'https://query.joystream.org/graphql',
 }
 
 const MEMBERSHIP_FAUCET_ENDPOINT: PredefinedEndpoint = {
   mainnet: MAINNET_MEMBERSHIP_FAUCET_URL,
-  local: 'http://localhost:3002/register',
+  local: 'https://faucet.joystream.org/member-faucet/register',
   testnet: TESTNET_MEMBERSHIP_FAUCET_URL,
-  'local-mocks': 'http://localhost:3002/register',
+  'local-mocks': 'https://faucet.joystream.org/member-faucet/register',
 }
 
 const NODE_RPC_ENDPOINT: PredefinedEndpoint = {
